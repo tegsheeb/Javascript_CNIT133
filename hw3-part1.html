@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>For and While loop, calculate sum and products</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<style>
+#draggable { width: 300px; height: 250px; padding: 0.5em; }
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#draggable" ).draggable();
+} );
+</script>   
+</head>
+
+
+<body>
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a href="hw2.html">Homework 2 </a>
+    <a class="active" href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+
+</header>
+    
+<div>
+    <header>
+<h1 >Homework 3, Part 1 <br> 
+    For and While loop that calculates products and sum</h1>
+    </header>
+
+<div id="draggable" class="ui-widget-content">
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<p id="result4"></p>
+</div> 
+
+<footer>
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+
+   
+</div>
+
+<script>
+    function for_statement() {
+        var sum = 0;
+        var product = 1;
+        for (var num = 5; num <21; num += 3) {
+            sum += num;
+            product = product * num;
+        };
+        console.log(sum);
+        console.log(product)
+        document.getElementById("result1").innerHTML = "Using FOR statement, sum of the every third integer from 5 to 20 is " + sum + ".";
+        document.getElementById("result2").innerHTML = "Using FOR statement, sum of the every third integer from 5 to 20 is " + product + ".";
+    };
+
+    for_statement();
+
+    function while_statement() {
+        var num = 3;
+        var sum = 0;
+        var product = 1;
+        while ( num<32) {
+            sum += num;
+            product = product * num;
+            num += 4;
+        };
+        console.log(sum);
+        console.log(product)
+        document.getElementById("result3").innerHTML = "Using WHILE statement, sum of the every fourth integer from 3 to 31 is " + sum + ".";
+        document.getElementById("result4").innerHTML = "Using WHILE statement, sum of the every fourth integer from 3 to 31 is " + product + ".";
+    };
+
+    while_statement();
+</script>
+</body>
+
+</html>

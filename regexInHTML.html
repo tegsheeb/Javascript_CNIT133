@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Playing with Regex</title>
+        <meta charset="utf-8">
+		<script>
+		function WriteMsg() {
+		   var fname = document.getElementById('fname').value;
+		   var lname = document.getElementById('lname').value;
+		   var age = parseInt(document.getElementById('age').value);
+		   var msg = "Your name is " + fname + " " + lname + " and your age is " + age;
+		   document.getElementById('result').innerHTML = msg;
+		}
+		</script>
+    </head>
+<body>
+
+<h2>Fill out the form below</h2>
+
+<form onsubmit="return false;">
+<label for="fname">First Name</label> <input type="text" placeholder="First Name" name="fname" id="fname" pattern="[A-Za-z]{3,20}" oninvalid="this.setCustomValidity('Min 3 letters and max 20 with no spaces'); document.getElementById('result').innerHTML='';" oninput="this.setCustomValidity('')"><br>
+<label for="lname">Last Name</label> <input type="text" placeholder="Last Name" name="lname" id="lname" pattern="[A-Za-z]{3,20}" oninvalid="this.setCustomValidity('Min 3 letters and max 20 with no spaces'); document.getElementById('result').innerHTML='';" oninput="this.setCustomValidity('')"><br>
+<label for="age">Age</label> <input type="number min="21" max="64" name="age" id="age" pattern="(2[1-9]|[3-5][0-9]|6[0-4])" oninvalid="this.setCustomValidity('Min age is 21 and max age is 64'); document.getElementById('result').innerHTML='';" oninput="this.setCustomValidity('')"><br><br>
+<input type="submit" value="Submit" onclick="WriteMsg()"><br>
+<input type="reset" value="Clear Form">
+</form>
+<p id="result"></p>
+</body>
+</html>

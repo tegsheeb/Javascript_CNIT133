@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="JS playground page">
+<title>Exercise</title>
+<script>
+function sum_of_between(){
+// 1) Get numbers typed by user
+    var num1 = parseInt(document.getElementById("n1").values)
+    var num2 = parseInt(document.getElementById("n2").values)
+    var low_num = num1;
+    var high_num = num2;
+// 2) test if n1 > n2 to establish lowest number and highest number
+    if (num1 > num2){
+        low_num = num2;
+        high_num = num1;
+    }
+// 3) loop
+    var sum = 0;
+    while (low_num <= high_num){
+        sum += low_num;
+        low_num ++;
+    }
+    document.getElementById("output") = sum;
+}
+</script>
+</head>
+
+<body>
+<!-- <body onload="nowOK()"> -->
+
+<h1>Simply playing with JS</h1>
+    <form>
+        <label for="num1"> Number 1: </label>
+        <input type="number" id="num1" name="num1"> <br>
+        <label for="num2"> Number 2: </label>
+        <input type="number" id="num2" name="num2"> <br>
+        <input type="submit" value="Submit Number" onclick="sum_of_between()"> 
+        <input type="reset" value="Clear Number">
+
+    </form>
+
+    <!-- <form onsubmit="return false;">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit Name"> <input type="reset" value="Clear Name">
+    </form> -->
+    <p id="output"> </p>
+<script>
+    // var counter = 0;
+    // while(counter < 10){
+    //     document.getElementById("output").innerHTML += counter + " ";
+    //     counter ++;
+    //     }
+
+    // var name = "tegshee";
+    // var last_name= "baasan";
+    // document.getElementById("output").innerHTML += "<br>" + name + " " + last_name + " &copy";
+    
+
+
+
+</script> 
+
+</body>
+</html>

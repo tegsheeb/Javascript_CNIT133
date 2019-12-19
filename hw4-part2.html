@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style_hw4.css">
+<title>CNIT 133 Homework 4 </title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+<script>
+        $(function () {
+            $("#attributeTable :radio").click(function () {
+                $("#target").css($(this).attr("name"), $(this).val());
+            });
+            
+            $("#fontSize").change(function () {
+                $("#target").css($(this).attr("name"), $(this).val());
+            });
+
+            $("#attributeTable :checkbox").change(function () {
+                $("#target").css($(this).attr("name"), this.checked ? $(this).val() : "");
+            });
+
+            $("#resetAll").click(function () {
+                $("#attributeTable [checked]").click(); 
+                $("#fontSize").val(""); 
+                $("#attributeTable :checked").click(); 
+            });
+        });
+</script>
+</head>
+
+
+<body >
+
+<header class="topnav">
+            <a href="index.html">Home </a>
+            <a href="hw2.html">Homework 2 </a>
+            <a href="hw3.html">Homework 3 </a>
+            <a class="active" href="hw4.html">Homework 4 </a>
+</header>
+
+<div id="target" >
+    <h1> Homework 4, Part 2 </h1> <br>
+    <h3>The part 2 is a webpage in which users are allowed to select a page layout and formatting through the use of the className property.</h3>
+        
+    <form id="attributeForm">
+            <p>Please choose background color, font family, font size and style of letter and 
+                words from below.</p>
+            <table id="attributeTable">
+                <tr>
+                    <th>Background Color</th>
+                    <th>Font Family</th>
+                    <th>Font Size</th>
+                    <th>Letters and Words</th>
+                </tr>
+                <tr>
+
+                    <td>
+                        <label><input type="radio" name="background-color" value="Azure"
+                                      id="azure">Azure</label><br>
+                        <label><input type="radio" name="background-color" value="lightpink"
+                                      id="lightpink">Light Pink</label><br>
+                        <label><input type="radio" name="background-color" value="Ivory"
+                                      id="ivory">Ivory</label><br>
+                        <label><input type="radio" name="background-color" value="Lavender"
+                                      id="lavender">Lavender</label><br>
+                        <label><input type="radio" name="background-color" value=""
+                                      id="bgColorDefault" checked>Default</label>
+                    </td>
+                    <td>
+                            <label><input type="radio" name="font-family" value="Verdana, Geneva, sans-serif"
+                                id="verdana">Verdana</label><br>
+                            <label><input type="radio" name="font-family" value='"Comic Sans MS", cursive, sans-serif'
+                                          id="comicSans">Comic Sans MS</label><br>
+                            <label><input type="radio" name="font-family" value="Tahoma, Geneva, sans-serif"
+                                          id="tahoma">Tahoma</label><br>
+                            <label><input type="radio" name="font-family" value='"Trebuchet MS", Helvetica, sans-serif'
+                                          id="trebuchet">Trebuchet MS</label><br>
+                            <label><input type="radio" name="font-family" value=""
+                                          id="fontFamilyDefault" checked>Default</label>
+                        </td>
+                    <td>
+                        <label for="fontSize">Select one:</label><br>
+                        <select name="font-size" size="5" id="fontSize">
+                            <option value="50%">50%</option>
+                            <option value="75%">75%</option>
+                            <option value="100%">100%</option>
+                            <option value="125%">125%</option>
+                            <option value="150%">150%</option>
+                            <option value="" selected>Default</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" name="font-weight" value="bold" id="boldCheck">bold</label><br>
+                        <label><input type="checkbox" name="font-style" value="italic" id="italicCheck">italic</label><br>
+                        <label><input type="checkbox" name="text-decoration" value="underline"
+                                      id="underlineCheck">underline</label><br>
+                        <label><input type="checkbox" name="letter-spacing" value="-1px" id="tight">tight</label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+                <h3>Camille Claudel</h3>
+            
+                <p>Camille Claudel; 8 December 1864 – 19 October 1943) was 
+                    a French sculptor who died in relative obscurity, but has gained recognition for the originality and quality of her work. 
+                    Claudel is known for such sculptures as The Waltz, The Mature Age, and others</p>
+            
+                <p>Claudel demonstrated interest in clay and molding at an early age, and on the advice of an established French sculptor moved 
+                    to Paris when she was 17 so she could study art. However, the influential École des Beaux-Arts prohibited women from 
+                    enrolling at the time, so she signed on at the Académie Colarossi, one of the few art schools where women were 
+                    allowed to study.</p>
+            
+                <p>Born in Fère-en-Tardenois, France, Claudel moved to the Montparnasse section of Paris in 1881 at the urging 
+                    of Alfred Boucher. Claudel studied with Boucher for three years before Rodin -- the sculptor who 
+                    created The Thinker -- was asked to take over her instruction.</p>
+        <footer>
+            <p>
+            Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+            <br>
+            E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+            </p>    
+        </footer>
+        
+</div>            
+</body>
+</html>

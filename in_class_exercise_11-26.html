@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SSN exercise</title>
+<meta charset="utf-8">
+<meta name="description" content="in-class exercise">
+</head>
+<body>
+
+<script>
+    function autotab(current,to){
+        if (current.getAttribute && 
+        current.value.length==current.getAttribute("maxlength")) {
+            to.focus() 
+            }
+    }
+
+    function validateForm(){
+        // var initialFirstName = document.getElementById("firsName").value[0]; 
+        // var initialMiddleName = document.getElementById("middleName").value[0]; 
+        var initialLastName = document.getElementById("lastName").value[0];
+        console.log(document.getElementById("lastName").value);
+
+    }
+</script>
+
+
+<form name="myForm">
+    <label for="firstName">First Name </label>
+    <input type="text" name="firstName" id="firstName" required>
+    <label for="middleName">Middle Name </label> 
+    <input type="text" name="middleName" id="middleName">
+    <label for="lastName"> Last Name </label>
+    <input type="text" name="lastName" id="lasttName" required>
+    <br>
+    <label for="ssn">Enter SSN seperated by hyphen, xxx-xx-xxxx </label>
+    <input type="text" name="ssn" id="ssn">
+
+<!-- 
+    <label for="ssn">Enter SSN </label>
+    <input type="number" name="firstSSN" id="firstSSN" size = 3 onkeyup="autotab(this, document.myForm.secondSSN)" maxlength="3" required>
+    - 
+    <input type="number" name="secondtSSN" id="secondSSN" size = 2  onkeyup="autotab(this, document.myForm.thirdSSN)"maxlength = "2" required>
+    -
+    <input type="number" name="thirdSSN" id="thirdSSN" size = 4 maxlength = "4" required> -->
+
+    <input type="submit" onclick="validateForm();" value="submit" id="submit">
+    <input type="reset" value="Clear Form" id = 'id'>
+
+    <div id="results"></div>
+
+</form>
+
+</body>
+</html>

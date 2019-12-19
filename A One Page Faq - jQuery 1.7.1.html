@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://hills.ccsf.edu/~cdasilva/cnit133/faqjquery.html -->
+<html lang="en" class="gr__hills_ccsf_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+<meta name="description" content="FAQ page using jQuery">
+<title>A One Page Faq - jQuery 1.7.1</title>
+<link href="./A One Page Faq - jQuery 1.7.1_files/faqjquery.css" rel="stylesheet">
+<style>
+h2 {
+	background: url(open.png) no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h2.close {
+	background-image: url(close.png);
+}
+.answer {
+	margin-left: 25px;	
+}
+</style>
+
+<!-- Note that you need jQuery version 1.7.1 here - do not use versiom 1.9.1 or later -->
+
+<script type="text/javascript" src="./A One Page Faq - jQuery 1.7.1_files/jquery-1.7.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('.answer').hide();
+ $('.main h2').toggle(
+		function() {
+	       $(this).next('.answer').slideDown();
+		   $(this).addClass('close');
+		},
+		function() {
+		   $(this).next('.answer').fadeOut();
+		   $(this).removeClass('close');
+	  }
+	); // end toggle
+}); // end ready
+</script>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div class="wrapper">
+<div class="header">
+	<p class="logo">JavaScript <i>&amp;</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+</div>
+<div class="content">
+	<div class="main">
+<h1>A One Page FAQ</h1>
+<h2 class="">I've heard that JavaScript is the long-lost fountain of youth. Is this true?</h2>
+      <div class="answer" style="display: none;">
+        <p>Why, yes it is! Studies prove that learning JavaScript freshens the mind and extends life span by several hundred years. (Note: some scientists disagree with these claims.)</p>
+      </div>
+      <h2>Can JavaScript really solve all of my problems?</h2>
+      <div class="answer" style="display: none;">
+        <p>Why, yes it can! It's the most versatile programming language ever created and is trained to provide financial management advice, life-saving CPR, and even to take care of household pets.</p>
+      </div>
+      <h2 class="close">Is there nothing JavaScript <em>can’t</em> do?</h2>
+      <div class="answer" style="display: block;">
+        <p>Why, no there isn’t! It’s even able to write its own public relations-oriented Frequently Asked Questions pages. Now that’s one smart programming language!</p>
+      </div>
+</div>
+</div>
+<div class="footer">
+<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+</div>
+</div>
+
+</body></html>

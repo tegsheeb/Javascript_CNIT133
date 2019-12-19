@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">    
+<title>Homework 2, Part 2, Salesperson's salary</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+</script>
+
+<script>
+    function calc(){
+        var n_item1, n_item2, n_item3, n_item4, total_item1, total_item2, total_item3, total_item4, final_total, salary;
+    
+        n_item1 = parseInt(document.getElementById("num_item1").value);
+        n_item2 = parseInt(document.getElementById("num_item2").value);
+        n_item3 = parseInt(document.getElementById("num_item3").value);
+        n_item4 = parseInt(document.getElementById("num_item4").value);
+    
+        if (n_item1 > 0 && n_item2 > 0 && n_item3 > 0 && n_item4 > 0 ){
+            
+            total_item1 = parseFloat(239.99 * n_item1).toFixed(2);
+            total_item2 = parseFloat(129.75 * n_item2).toFixed(2);
+            total_item3 = parseFloat(99.95 * n_item3).toFixed(2);
+            total_item4 = parseFloat(350.89 * n_item4).toFixed(2);
+            
+            final_total = parseFloat(total_item1 + total_item2 + total_item3 + total_item4).toFixed(2);
+            
+            salary = parseFloat(200 + final_total * 0.09).toFixed(2);
+            document.forms["salesperson_total"].elements["int_item1"].value = n_item1; document.forms["salesperson_total"].elements["int_item2"].value = n_item2;
+            document.forms["salesperson_total"].elements["int_item3"].value = n_item3; document.forms["salesperson_total"].elements["int_item4"].value = n_item4;
+             
+            document.forms["salesperson_total"].elements["total_item1"].value = total_item1; document.forms["salesperson_total"].elements["total_item2"].value = total_item2;
+            document.forms["salesperson_total"].elements["total_item3"].value = total_item3; document.forms["salesperson_total"].elements["total_item4"].value = total_item4;
+            document.forms["salesperson_total"].elements["final_total"].value = final_total;
+            
+             document.forms["salesperson_total"].elements["salary"].value = salary;
+            
+        } else {
+        alert("Please enter non-negative valid items number");
+        };
+    }
+</script>   
+
+<body>
+ 
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a class="active" href="hw2.html">Homework 2 </a>
+    <a href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+</header>    
+    
+<div>
+    
+<h1 >Homework 2, Part 2, Salesperson's weekly earnings</h1>
+
+<section>
+
+<form name="salesperson_total">
+
+    <label for="name"> Enter Salesperson's name: </label> <input type="text" name="sp" id="name" size="20" title="Please make sure that the salesperson's name is spelled correctly.">
+    <br>
+    <br>
+    <br>
+    <br>
+
+<h3>Input the number of items sold for each item number:</h3>
+
+<label for="num_item1">Item 1:</label> <input class="t" type="number" name="num_item1" id="num_item1" ><br>
+<label for="num_item2">Item 2:</label> <input class="t" type="number" name="num_item2" id="num_item2"><br>
+<label for="num_item1">Item 3:</label> <input class="t" type="number" name="num_item3" id="num_item3" ><br>
+<label for="num_item1">Item 4:</label> <input class="t" type="number" name="num_item4" id="num_item4" ><br><br>
+<input type="button" onclick="calc()" value="Submit">
+<input type="reset" value="Reset"><br><br>
+
+
+<table>
+<tr><th>Item #</th><th>Price</th><th>Number Sold</th><th>Total</th></tr>
+
+<tr><td>1</td><td>$239.99</td><td><input type="text" class="t" name="int_item1"></td><td><input type="text"  class="t" name="total_item1"></td></tr>
+<tr><td>2</td><td>$129.75</td><td><input type="text" class="t" name="int_item2"></td><td><input type="text"  class="t" name="total_item2"></td></tr>
+<tr><td>3</td><td>$99.95</td><td><input type="text" class="t" name="int_item3"></td><td><input type="text"  class="t" name="total_item3"></td></tr>
+<tr><td>4</td><td>$350.89</td><td><input type="text" class="t" name="int_item4"></td><td><input type="text" class="t" name="total_item4"></td></tr>
+<tr><td colspan="3">Total Amount Sold:</td><td><input type="text" class="t" name="final_total"></td></tr>
+<tr><td colspan="3">Total Weekly Earnings:</td><td><input type="text"  class="t" name="salary"></td></tr>
+</table>
+
+</form>
+<br>
+
+</section>
+</div>
+</body>
+</html>    
+    

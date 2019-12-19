@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test</title>
+<meta charset="utf-8">
+<meta name="description" content="playground page for JS">
+<style>
+button { display: inline-block; margin-right: 20px; background-color: gray; border-radius:5px; }
+input:focus { background-color: yellow; border: 1px solid red; }
+</style> 
+<script>
+  function checkinput() {
+     var listinput = document.getElementsByTagName("input");
+	 console.log(listinput.length);
+	 var nbrempty = 0;
+	 var nbrok = 0;
+	 for (i=0; i < listinput.length; i++) {
+	    if (listinput[i].value == "") {
+		  nbrempty += 1;
+		} else {
+		  nbrok += 1;
+		}
+	 }
+	 
+	 document.getElementById("result").value = "You filled out " + nbrok + " boxes in the form above!";
+		
+  }
+</script>
+</head>
+<body>
+<h1>CNIT 133 Playground for our JS</h1>
+<h2>HTML elements in an array</h2>
+
+<form onsubmit="return false;">
+<label for="fname">First Name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="lname">Last Name:</label><br>
+<input type="text" id="lname" name="lname"><br>
+<label for="age">Age:</label><br>
+<input type="number" id="age" name="age"><br><br>
+<textarea readonly id="result"></textarea>
+<button type="submit" onclick="checkinput();">Submit</button>
+<button type="reset">Reset</button>
+</form>
+
+
+</body>
+</html>

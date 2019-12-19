@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CNIT 133 Homework</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+</head>
+    
+<body style="background-color:#FBF97E">
+<div style="width:760px; margin:0 auto; border:2px double darkblue; background-color:#FFF; padding:10px;">
+
+    
+    <header>
+<h1 style="text-align:center; color:darkblue;"> CNIT 133 Howework Page</h1>
+    </header>
+    
+    <section>
+        <h2>
+        Assigments
+        </h2>    
+        
+    </section>
+    
+    <ul style="line-height: 2.5; font-weight: bold">
+      <li> <a href="hw2.html"> Homework 2</a></li>
+      <li> <a href="hw3.html"> Homework 3</a></li>
+      <li> <a href="hw4.html"> Homework 4</a></li>
+    </ul>
+    
+<footer>
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+</div>
+</body>
+</html>

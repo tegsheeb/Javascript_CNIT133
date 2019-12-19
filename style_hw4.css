@@ -1,0 +1,111 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#FBF97E;
+}
+
+div {
+/*    width:760px; */
+/*    margin:0 auto; */
+/*    border:2px double darkblue;*/
+    background-color:#FFF;
+    padding:10px;
+}
+
+h1 {
+    text-align:center; 
+    color:darkblue;
+}
+
+h2 {
+    color: blue;
+    background: url(open.png) no-repeat 0 11px;
+    padding: 10px 0 0 25px;
+    cursor: pointer;
+}
+
+h2.close{
+    background-image: url(close.png);
+}
+
+.details {
+    margin-left: 25px;
+}
+
+ul {
+    line-height: 2.5; 
+    font-weight: bold;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: white;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+#attributeTable{ 
+    border: solid blue;
+    padding: 5;
+}
+
+#wrapper {
+	width:800px;
+	margin:0px auto;
+	text-align:left;	
+	}
+
+#navigation ul, #navigation li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navigation a {
+	background-color:lightcyan;
+	text-decoration: none;
+	font: 16px 'ColaborateLightRegular', Arial, sans-serif;
+	text-indent: 25px;
+	border-top: 1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #999;
+	border-bottom:1px solid #999;
+	margin: 0px;
+	padding: 0px;
+	color: rgb(9, 86, 240);
+}
+
+#navigation a:hover {
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background-color: #555;
+	color: white;
+}
+

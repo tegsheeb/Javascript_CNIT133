@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>Homework 2, Part 3, C and F </+></title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+
+<script>
+    function celcius() {
+        var C, F;
+        F = parseFloat(document.getElementById("fah").value)
+        
+        C = (5/9 * (F - 32)).toFixed(2); 
+        document.getElementById("results_cel").innerHTML = F + " degrees in Fahrenheit is " + C + " degrees in Celcius";
+        
+    }
+</script>
+<script>
+    function fahrenheit() {
+        var C, F;
+        C = parseFloat(document.getElementById("celcius_input").value)
+        F = ((9/5 * C) + 32).toFixed(2);
+        document.getElementById("results_far").innerHTML = C + " degrees in Celcius is " + F + " degrees in Fahrenheit";
+    } 
+</script>
+</head>
+
+
+<body>
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a class="active" href="hw2.html">Homework 2 </a>
+    <a href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+
+</header>    
+<div>
+
+<h1 >Homework 2, Part 3, Celsius and Fahrenheit </h1>
+    
+ 
+<form name="studentGrade">
+    <label for="fah">Enter Fahrenheit: </label><input type="number" name="fah" id="fah">
+    <input type="button" onclick="celcius()" value="Convert to Celcius" id="sub1">
+    <input type="reset" value="Clear Form" id="clear1">
+
+    <br><br>
+    
+    <label for="celcius_input">Enter Celsius: </label><input type="number" name="celsius_input" id="celcius_input">
+     <input type="button" onclick="fahrenheit()" value="Convert to Fahrenheit" id="sub2">
+    <input type="reset" value="Clear Form" id="clear2">
+    
+    
+    <div id="results_cel"></div>
+    <div id="results_far"></div>
+    
+</form>
+
+
+    
+
+<footer>
+
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+
+    
+</div>
+</body>
+</html>

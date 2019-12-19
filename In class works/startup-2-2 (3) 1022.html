@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trillium Media Design</title>
+<meta charset="utf-8">
+
+<style>
+body { /* background-color:#f4ffe4; */
+       color:#333333;
+    background: url('trilliumfoot.gif') no-repeat bottom right, url('trilliumfoot.gif') no-repeat bottom left, #f4ffe4; 
+    /* background-image: url('trilliumfoot.gif'), url('trilliumfoot.gif');
+    background-repeat: no-repeat, no-repeat; */
+}
+h1 { background-color:#d5edb3;  
+     color:#5c743d;
+	 height:86px;
+}
+h2 { background-color:#d5edb3;
+     color:#5c743d;
+    background-image: url('trilliumbg.gif');
+    background-repeat: no-repeat;
+    /* background-position: right; */
+    padding-left: 27px;
+    text-shadow: 5px 5px 5px black;
+}
+.companyname { color: #6A6AA7;
+}
+    
+    #cssnav ul { list-style-type: none; padding: 0; }
+    #cssnav a { text-decoration: none; color: #d5edb3; font-size: 1.5em; font-weight:bold; display:block; }
+    /* display: block now I am accessible!!! */
+    #cssnav li { background-color: #5c743d; display: inline-block; /* padding: 10px; */ height:3em; line-height: 3em; width: 100px; text-align:center; border-radius: 15px; box-shadow: 5px 5px 10px black; }
+    
+    #box { height: 10em; text-align:center; background-color: yellow; line-height: 10em; }
+    
+    .dom {border: 2px solid; padding: 10px; margin:10px; }
+    
+    .imglogo { list-style-image: url('trillium.gif');}
+    
+    /* ul:not(:first-child) - would not work because.... */
+    
+    #radius { height: 160px; width:320px; /* margin: auto; */ background-color: orange; border-radius: 50%;} /* 50% when it's a square */
+    
+</style>
+</head>
+<body>
+ <!-- <h1>Trillium Media Design</h1> -->
+ <picture>
+   <source media="(min-width:600px)" srcset="trilliumbanner.jpg">
+   <img src="trilliumfoot.gif" alt="logo or banner of startup company">
+</picture>   
+    
+     <!-- <img src="trilliumbanner.jpg" alt="banner logo for the trillium startup company" width="700" height="68"> -->
+<nav><a href="index.html">Home</a> <a href="services.html">Services</a> <a href="contact.html">Contact</a></nav>
+    
+    <nav><a href="index.html"><img src="home.gif" alt="button link to home page"></a> <a href="services.html"><img src="services.gif" alt="button link to services page"></a> <a href="contact.html"><img src="contact.gif" alt="button link to contact page"></a></nav>
+
+    <nav id="cssnav">
+     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li> 
+      <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </nav>
+    
+    <h2>New Media and Web Design</h2>
+ <p class="dom"><span class="companyname">Trillium Media Design</span> will bring your company's Web presence to the next level. <br>
+   We offer a comprehensive range of services:  </p>
+<ul class="imglogo">
+    <li>Website Design</li>
+    <li>Interactive Animation</li>
+    <li>E-Commerce Solutions</li>  	
+    <li>Usability Studies</li>
+    <li>Search Engine Optimization</li>
+  </ul>
+  <h2>Meeting Your Business Needs</h2>
+        <div id="box">Right in the middle of it</div>
+    
+    <div id="radius"></div>
+
+  <p>Our expert designers are creative and eager to work with you.<br> 
+  Take advantage of the power of Web 2.0!</p>
+<div id="footer">Copyright &copy; 2012 Your Name Here</div>
+</body>
+</html>

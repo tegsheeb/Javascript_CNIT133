@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style_hw4.css">
+<title>CNIT 133 Homework 4 </title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="dropdown_plugin.js"></script>
+
+<script> 
+$(document).ready(function() {
+ $("#navigation").navPlugin({
+   'itemWidth': 180,
+   'itemHeight': 30,
+   'navEffect': "slide",
+   'speed': 250
+ });
+}); // end ready
+</script>
+
+</head>
+
+
+<body>
+
+<header class="topnav">
+            <a href="index.html">Home </a>
+            <a href="hw2.html">Homework 2 </a>
+            <a href="hw3.html">Homework 3 </a>
+            <a class="active" href="hw4.html">Homework 4 </a>
+</header>
+
+<div>
+    <h1> Homework 4, Part 3 </h1> <br>
+    <h3> Part 3 is a webpage with a example of top navigation bar which displays a drop-down menu when user mouseover it.</h3>
+    <ul id="navigation">
+            <li> <a href="index.html">Homework 1</a></li>
+            <li><a href="hw2.html">Howework 2</a>
+                <ul>
+                    <li> <a href="hw2-part1.html">Part 1</a></li>
+                    <li> <a href="hw2-part2.html"> Part 2 </a></li>
+                    <li> <a href="hw2-part3.html">Part 3</a></li>
+                </ul>
+            </li>
+            <li><a href="hw3.html">Howework 3</a>
+                    <ul>
+                        <li> <a href="hw3-part1.html">Part 1</a></li>
+                        <li> <a href="hw3-part2.html">Part 2</a></li>
+                        <li> <a href="hw3-part3.html">Part 3</a></li>
+                        <li> <a href="hw3-part4.html">Part 4</a></li>
+                    </ul>
+            </li>
+            <li><a href="hw4.html">Howework 4 </a>
+                    <ul>
+                        <li> <a href="hw4-part1.html">Part 1</a></li>
+                        <li> <a href="hw4-part2.html">Part 2</a></li>
+                        <li><a href="hw4-part3.html">Part 3</a></li>
+                    </ul>
+                </li>
+        </ul> 
+        <footer>
+            <p>
+            Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+            <br>
+            E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+            </p>    
+        </footer>
+        
+</div>            
+</body>
+</html>

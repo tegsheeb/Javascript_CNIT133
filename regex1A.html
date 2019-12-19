@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Regular Expression - phone check">
+<title>Regular expression - phone # check</title>
+    
+      <script>
+          
+         function checkExp() {
+
+
+       
+            var errMsg = "Invalid phone #";
+            var phoneNumber = document.getElementById("phone").value;
+
+
+              phoneRegExp = /^(\()(\d{3})(\))(\s)(\d{3})(-\d{4})$/;
+            
+            if ( !phoneRegExp.test(phoneNumber))
+
+            alert("inputted phone# has wrong format \nPlease use exactly (999) 999-9999\nwhere each 9 represents a number")
+
+            else  {  
+
+
+           alert("valid phone #")
+                 }
+
+         }
+      
+      </script>
+
+ <style>
+
+      body {background-color: #808080; color: white;}
+      .body { width: 415px; margin: 0px auto;}
+
+      div {font-size: 18px; font-weight: bold; color:yellow;}
+
+	  table
+	  {
+       border-collapse:collapse;
+      }
+
+	  table, td
+      {
+       border:1px solid white;
+      }
+     </style>
+</head>
+
+<body onload="document.getElementById('phone').focus();">
+
+<section class="body">
+
+<h3>Regular Expressions</h3>
+
+      <form name = "myForm">
+         <table>
+            <tr>
+               <td>Enter a Phone number<br>
+                  [in the form (999) 999-9999]
+               </td>
+               <td>
+                  <input name="phone" id="phone" type="text" size="10" autofocus>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <input type="button" value="Submit" onclick="checkExp()">
+               </td>
+            </tr>
+            
+         </table>
+         <input type="reset" value="Reset" onClick="window.location.reload();">
+      </form>
+</section>
+</body>
+</html>

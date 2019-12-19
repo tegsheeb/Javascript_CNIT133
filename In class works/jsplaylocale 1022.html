@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test</title>
+<meta charset="utf-8">
+<meta name="description" content="playground page for JS">
+<style>
+#result { font-weight: bold; font-style:italic; }
+input:focus { background-color: yellow; border: 1px solid red; }
+table { border: 2px red solid; border-collapse: collapse; }
+th, td { border: 1px red solid; padding: 10px; }
+tr:nth-child(even) { background-color: gray; }
+</style> 
+</head>
+<body>
+<h1>CNIT 133 Playground for our JS</h1>
+<h2>Using toLocaleString()</h2>
+
+<script>
+var n = new Date();
+var x = 231256;
+document.write("<h3>Number to be formatted " + x + " and current date/time</h3>");
+document.write("<table><tr><th>Locale</th><th>Option</th><th>Output</th></tr>");
+document.write("<tr><td>de-DE date</td><td>N/A</td><td>" + n.toLocaleString("de-DE") + "</td></tr>");
+document.write("<tr><td>de-DE number</td><td>N/A</td><td>" + x.toLocaleString("de-DE") + "</td></tr>");
+document.write("<tr><td>de-DE number</td><td>currency, Euro</td><td>" + x.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'}) + "</td></tr>");
+document.write("<tr><td>en-US date</td><td>N/A</td><td>" + n.toLocaleString("en-US") + "</td></tr>");
+document.write("<tr><td>en-US number</td><td>N/A</td><td>" + x.toLocaleString("en-US") + "</td></tr>");
+document.write("<tr><td>en-US number</td><td>currency, Dollar</td><td>" + x.toLocaleString("en-US", {style: 'currency', currency: 'USD'}) + "</td></tr>");
+document.write("<tr><td>pt-BR date</td><td>N/A</td><td>" + n.toLocaleString("pt-BR") + "</td></tr>");
+document.write("<tr><td>pt-BR number</td><td>N/A</td><td>" + x.toLocaleString("pt-BR") + "</td></tr>");
+document.write("<tr><td>pt-BR number</td><td>currency, Brazilian Real</td><td>" + x.toLocaleString("pt-BR", {style: 'currency', currency: 'BRL'}) + "</td></tr>");
+document.write("</table>");
+</script>
+</body>
+</html>

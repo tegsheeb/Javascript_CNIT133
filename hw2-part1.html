@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>Student Grades</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+
+<script>
+    function finalGrade() {
+        var hwAvg, midExam, finalExam, part, finalAvg, round;
+        hwAvg = parseInt(document.getElementById("hwAvg").value);
+        midExam =parseInt(document.getElementById("midExam").value);
+        finalExam =parseInt(document.getElementById("finalExam").value);
+        part =parseInt(document.getElementById("participation").value);
+        
+        finalAvg = Math.round((0.5 * hwAvg) + (0.2 * midExam) + (0.2 * finalExam) + (0.1 * part));
+
+        
+        if((hwAvg <= 100 && hwAvg >=0) && (midExam <= 100 && midExam >=0) && (finalExam <= 100 && finalAvg >=0) && (part <= 100 && part >=0)){
+            if (finalAvg >= 90 && finalAvg <=100) {
+                document.getElementById("results").innerHTML = "Your final average score is " + finalAvg + " and final Grade is A." ;
+            } if (finalAvg >= 80 && finalAvg < 90) {
+                document.getElementById("results").innerHTML = "Your final average score is " + finalAvg + " and final Grade is B."; 
+            } if (finalAvg >= 70 && finalAvg < 80)  {
+                document.getElementById("results").innerHTML = "Your final average score is " + finalAvg + " and final Grade is C.";
+            } if (finalAvg >= 0 && finalAvg < 70) {
+                document.getElementById("results").innerHTML = "Student must retake the course.";}
+        } else {
+            document.getElementById("results").innerHTML = "Please enter valid scores between 0 and 100.";
+        };
+    }
+</script>
+    
+    
+</head>
+
+
+<body>
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a class="active" href="hw2.html">Homework 2 </a>
+    <a href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+
+</header>
+    
+<div>
+    <header>
+<h1 >Homework 2, Part 1, Student Grades</h1>
+    </header>
+    
+ 
+<form name="studentGrade">
+    <label for="hwAvg">Enter homework average score: </label><input type="number" name="hwAvg" id="hwAvg">
+    <br><br>
+    <label for="midExam">Enter mid-term exam score: </label><input type="number" name="midExam" id="midExam">
+    <br><br>
+    <label for="finalExam"> Enter final exam score: </label> <input type="number" name="finalExam" id="finalExam">
+    <br><br>
+    <label for="participation"> Enter participation score:  </label><input type="number" name="participation" id="participation">
+    
+    <br><br>
+    <input type="button" onclick="finalGrade();" value="Submit" id="sub">
+    <input type="reset" value="Clear Form" id="clear">
+    <div id="results"></div>
+</form>
+
+        
+<footer>
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+
+    
+</div>
+</body>
+</html>

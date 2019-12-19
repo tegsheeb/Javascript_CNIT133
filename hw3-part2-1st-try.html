@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>Text box, radio buttons, checkbox and select items</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<script>
+        function validateForm() {
+           var formValue1 = document.myForm.userName.value;
+           var formValue2 = document.myForm.gender;
+           var formValue3 = document.myForm.ageRange;
+           var formValue4 = document.myForm.howDidYouHear.value;
+    
+           if (formValue1 == ""){
+               alert("Please enter username");
+               return false;
+           };
+    
+           for (var i = 0; i < formValue2.length; i++){
+               if (formValue2[i].checked){
+                   break;
+               };
+               if (i == formValue2.length - 1){
+                   alert("Please select gender");
+               };
+           }
+           for (var i = 0; i < formValue3.length; i++){
+               if (formValue3[i].checked){
+                   break;
+               };
+               if (i == formValue3.length -1){
+                   alert("Please age range");
+               };
+           }
+    
+            if (formValue4 == ""){
+                alert("Please select an option");
+                return false;
+           };
+    
+        };
+    </script>
+</head>
+
+<body>
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a href="hw2.html">Homework 2 </a>
+    <a class="active" href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+
+</header>
+    
+<div>
+    <header>
+<h1 >Homework 3, Part 2 <br> 
+    Text box, radio buttons, checkbox and select items</h1>
+    </header>
+
+<form name="myForm" action="hw3-part2-submission.html" method="post" >
+    <label for="userName">Enter your username: </label><input type="text" name="userName" id="userName">
+    <br><br>
+    Select gender:
+    <input type="radio" name="gender" value="Male">Male 
+    <input type="radio" name="gender" value="Female">Female 
+    <input type="radio" name="gender" value="Others">Others     
+    <br><br>
+    Your age: 
+    <input type="checkbox" name="ageRange"  value="under 21"> under 21
+    <input type="checkbox" name="ageRange"  value="21-35"> 21-35 years
+    <input type="checkbox" name="ageRange"  value="35-50"> 25 - 50 years
+    <input type="checkbox" name="ageRange"  value="over 50"> over 50 years
+    <br><br>
+    How did you hear about us?
+    <select name="howDidYouHear" id="howDidYouHear" size="5">
+        <option value = "">Choose an option</option>
+        <option value = "1">Web search</option>
+        <option value = "2">From friend</option>
+        <option value = "3">From School</option>
+        <option value = "4">Other</option>
+      </select>
+    <br><br>
+    <input type="submit" onclick="validateForm();" value="Submit" id="sub">
+    <input type="reset" value="Clear Form" id="clear">
+    <div id="results"></div>
+</form>
+
+
+<footer>
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+   
+</div>
+</body>
+
+</html>

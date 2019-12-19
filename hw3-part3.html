@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="style.css">
+<title>Pulldown menus</title>
+<meta charset="utf-8">
+<meta name="description" content="CNIT 133 homeworks at CCSF">
+<script>
+        function goToNewPage(myForm) {
+            var myDestination = myForm.destinationList.options[myForm.destinationList.selectedIndex].value;
+            window.location = myDestination;
+            };
+</script>
+</head>
+
+
+<body>
+<header class="topnav">
+    <a href="index.html">Home </a>
+    <a href="hw2.html">Homework 2 </a>
+    <a class="active" href="hw3.html">Homework 3 </a>
+    <a href="hw4.html">Homework 4 </a>
+
+</header>
+    
+<div>
+    <header>
+<h1 >Homework 3, Part 3 <br> 
+    Pulldown menus with onchange and onclick event handler</h1>
+    </header>
+<form>
+<h3>Choose your destination (using onChange event handler)</h3>
+    <select name="destinationList" onChange="goToNewPage(this.form);">
+        <option>Choose Destination:</option>
+        <option value="https://ccsf.edu/">CCSF</option>
+        <option value="https://www.ucsf.edu/">UCSF</option>
+        <option value="https://www.usfca.edu/">USF</option>
+        <option value="https://www.sfsu.edu/">SFSU</option>
+    </select>
+</form>
+            
+<br><br>
+            
+<form>
+    <h3>Choose your destination (using onClick event handler)</h3>
+        <select name="destinationList">
+            <option value="https://ccsf.edu/">CCSF</option>
+            <option value="https://www.ucsf.edu/">UCSF</option>
+            <option value="https://www.usfca.edu/">USF</option>
+            <option value="https://www.sfsu.edu/">SFSU</option>
+        </select>
+    <input type="button" value="Go" onClick="goToNewPage(this.form);">
+</form>            
+
+<footer>
+    <p>
+    Student name: <a href="https://www.linkedin.com/in/tegshbayar-baasan-48526428"> Tegshbayar Baasan </a>
+    <br>
+    E-mail address: <a href="mailto:tbaasan@mail.ccsf.edu">tbaasan@mail.ccsf.edu</a>
+    </p>    
+</footer>
+   
+</div>
+</body>
+
+</html>

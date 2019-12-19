@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test</title>
+<meta charset="utf-8">
+<meta name="description" content="playground page for JS">
+<style>
+textarea { font-weight: bold; font-style:italic; }
+input:focus { background-color: yellow; border: 1px solid red; }
+</style>
+<script>
+    function countletters() {
+	   var text = document.getElementById("usertxt").value;
+	   // text = text.split(' ').join('-');
+	   // console.log(text);
+       var total = 0;
+	   var blank = 0;
+       for (var l of text) {
+	    /* if (text[l] == '-') {
+            blank = blank + 1;
+			console.log("blank space");
+		} else { */
+		    total = total + 1;
+			/* console.log("non-blank space");
+        } */
+		}
+	document.getElementById("result").value = "You typed " + text + " and it has " + total + " character(s)" /* and " + blank + " blank space(s)" */;
+	}
+	
+	function startover() {
+	   document.getElementById('result').value = "";
+	   document.getElementById('usertxt').value = "";
+	}
+    </script>
+</head>
+<body>
+<h1>CNIT 133 Playground for our JS</h1>
+
+<form onsubmit="return false;">
+<label for="usertxt">Type any word:</label><br>
+<input type="text" required id="usertxt" name="usertxt">
+<br><br>
+<textarea readonly id="result" name="result"></textarea>
+<br><br>
+<button type="button" id="sub" onclick="countletters();">Submit</button>&nbsp;&nbsp;&nbsp;<button type="button" id="clear" onclick="startover();">Start Over</button>
+</form>
+</body>
+</html>
